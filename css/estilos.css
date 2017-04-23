@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Muli|Titillium+Web:600');
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+p {
+	color: purple;
+	margin: 0;
+	padding: 0;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+
+/* selectores de clase ·············································*/
+.contenido {
+	height: 100%;
+	width: 100%;
+	background: url('../images/bkgr.jpg') ;
+	background-size: cover;
+	transition:all 0.5s ease;
+}
+
+.contenido:hover {
+	transform: scale(1.2);
+}
+
+.contenido, .rectangulo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.rectangulo {
+	background: rgba(255,255,255,0.8);
+	border-radius: 25px;
+	padding: 30px;
+	box-shadow: 0px 5px 25px rgba(0,0,0,0.2);
+	opacity: 0;
+	transition: 1s;
+	z-index: 9999;
+}
+.contenido:hover .rectangulo {
+	opacity: 10;
+}
+
+
+
+.logo {
+	width: 200px;
+	transition: 1s;
+}
+.contenido:hover .logo {
+	transform: scale(1.1);
+}
+
+.vinil {
+	width: 300px;
+	opacity: 0;
+	transition: 0.5s;
+	-webkit-animation: rotation 2s infinite linear;   /* con ayuda de http://jsfiddle.net/5Hm9u/2/ */
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+.contenido:hover .vinil {
+	opacity: 1; 
+}
+
+.marco {
+	margin: 0;
+	width: 90%;
+	height: 90%;
+	padding: 10px;
+	border: 10px solid transparent;
+	overflow: hidden;
+	transition: 0.4s;
+}
+
+.marco:hover {
+border: 10px solid purple;
+	
+}
